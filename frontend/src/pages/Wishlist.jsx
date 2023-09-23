@@ -34,6 +34,8 @@ export default class WishList extends React.Component {
 
     this.wishobj = {importance: '', name: '', price: '', category: '', additional_info: ''}
 
+    this.getWishesFromDB(this.sberAssistantUserId)
+
   //   this.assistant = initializeAssistant(() => this.getStateForAssistant() );
   //   this.assistant.on("data", (event/*: any*/) => {
   //     if(event.type=="smart_app_data"){
