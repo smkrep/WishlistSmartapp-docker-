@@ -1,0 +1,357 @@
+body {
+  background-color: #292929; 
+  font-family: 'San Francisco' !important;
+}
+
+.container {
+  margin: 0.78%; /*10px*/
+  padding: 2.34%; /*30px*/
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 3%; /*150px*/
+  margin-bottom: 5.86%; /*75px*/
+}
+
+.buttonContainer {
+  margin: 0.78%; /*10px*/
+  padding: 2.34%; /*30px*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 3%; /*150px*/
+  margin-bottom: 3%; /*75px*/
+}
+
+.addWishButton {
+  background-color: rgb(92, 92, 92);
+  padding: 16px 32px;
+  font-size: 32px;
+  color: rgb(224, 224, 224);
+  font-family: 'San Francisco'
+}
+
+.addWishButton {
+  
+  width: 30%;
+  height: fit-content;
+  cursor: pointer;
+  box-shadow: 0 0 50px #202020;
+  outline: none;
+  border: none;
+  border-radius: 64px;
+}
+
+.addWishButton:hover, .addWishButton:active, .addWishButton:focus{
+  color: #1baf47;
+  background-color: #2a4929;
+}
+
+
+.container-2 {
+  margin: 0.78%; /*10px*/
+  padding: 2.34%; /*30px*/
+  display: grid;
+  margin-top: 11.72%; /*150px*/
+  margin-bottom: 5.86%; /*75px*/
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.not-important {
+  border-color: #19963f !important;
+}
+
+.medium {
+  border-color: #d3d00e !important;
+}
+
+.important {
+  border-color: #d31515 !important;
+}
+
+.not-important > .body {
+  border-color: #19963f !important;
+}
+
+.medium > .body {
+  border-color: #d3d00e !important;
+}
+
+.important > .body {
+  border-color: #d31515 !important;
+}
+
+
+.wish {
+  width: 20rem;
+  height: fit-content;
+  max-height: 15rem;
+  border-radius: 15px;
+  background: rgb(92, 92, 92);
+  border: 2px solid;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: none;
+}
+
+.wish > .header {
+      width: 100%;
+      height: 1.75rem;
+      border-radius: 15px 15px 0 0;
+      text-align: center;
+      
+  }
+
+  .options {
+    margin: 5px 0 0 0;
+    color: rgb(224, 224, 224);
+    font-size: 20pt;
+  }
+
+.deleteWish {
+  cursor: pointer;
+  width: 20%;
+  margin: auto;
+}
+
+.footer {
+    height: 200px;
+    width: auto;
+}
+  
+
+.wish > .name {
+      width: 100%;
+      height: 35%;
+      line-height: 84px;
+      text-align: center;
+      color: rgb(224, 224, 224);
+      font-size: 20pt;
+      overflow: hidden;
+      cursor: pointer;
+      background: #3d3d3d;
+      border-bottom: 2px solid;
+      border-color: inherit;
+      transition: height 0.5s;
+}
+
+.description-header {
+   color: rgb(150, 150, 150);
+   font-size: 10pt;
+   line-height: 10pt;
+   margin: 10px 0;
+}
+
+.wish > .name > span {
+  max-height: 80%;
+  max-width: 90%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 24pt;
+}
+
+  .wish > .body {
+    background: rgb(92, 92, 92);
+    width: 90%;
+    height: 6rem;
+    position: relative;
+    padding: 5%;
+    border-radius: 0 0 30px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+  max-width: 80%;
+  color: rgb(224, 224, 224);
+  font-size: 24pt;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.category {
+  color: rgb(224, 224, 224);
+  font-size: 20pt;
+  display: flex;
+  margin-top: 5%;
+}
+
+.category-name {
+  font-size: 20pt;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-left: 2%;
+  max-height: 31px;
+}
+
+.description {
+  max-height: 200px;
+  text-align: left;
+  line-height: normal;
+  padding: 5%;
+  overflow-y: scroll;
+}
+
+.description-parameter {
+  font-size: 18pt;
+}
+
+.description-text {
+  margin: 1% 0 1% 0;
+  font-size: 14pt;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.triangle-down {
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-top-color: inherit !important;
+  border-bottom: solid 29px transparent;
+  border-top: solid 29px;
+  border-left: solid 29px transparent;
+  border-right: solid 29px transparent;
+  cursor: pointer;
+}
+
+.triangle-down:before {
+  content: "";
+  width: 0;
+  height: 0;
+  
+  position: absolute;
+  border-bottom: solid 28px transparent;
+  border-top: solid 28px #3d3d3d;
+  border-left: solid 28px transparent;
+  border-right: solid 28px transparent;
+  top: -31px;
+  left: -28px;
+}
+
+.triangle-up {
+  top: -60px;
+  right: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-bottom-color: inherit !important;
+  border-bottom: solid 29px;
+  border-top: solid 29px transparent;
+  border-left: solid 29px transparent;
+  border-right: solid 29px transparent;
+  cursor: pointer;
+}
+
+.triangle-up:before {
+  content: "";
+  width: 0;
+  height: 0;
+  
+  position: absolute;
+  border-bottom: solid 28px rgb(92, 92, 92);
+  border-top: solid 28px transparent;
+  border-left: solid 28px transparent;
+  border-right: solid 28px transparent;
+  top: -25px;
+  left: -28px;
+}
+
+.expanded .name  {
+  height: fit-content !important;
+  transition: height 0.5s;
+}
+
+.wish.expanded {
+  max-height: 50rem !important;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.expanded .category-name {
+  max-height: fit-content;
+  overflow: unset;
+  word-break: break-word;
+}
+
+.expanded .body {
+  height: fit-content;
+}
+
+.expanded .name span {
+  overflow: unset;
+  word-break: break-word;
+}
+.expanded .price {
+  overflow: unset;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(92, 92, 92);
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(75, 75, 75);
+}
+
+@media (max-width:350px) {
+  .wish {
+    width: 18rem;
+  }
+}
+
+@media (max-width:350px) {
+  .wish {
+    width: 16rem;
+  }
+}
+@media (min-width:351px) and (max-width:450px) {
+  .wish {
+    width: 18rem;
+  }
+}
+
+@media (max-width:768px) {
+  .addWishButton {
+    width: 70%;
+  }
+  .description-header {
+    margin: -5px;
+  }
+
+}
+
+@media (min-width: 800px) {
+  .wish:hover, .wish:active, .wish:focus {
+    max-height: 17rem;
+    box-shadow: 0 0 50px #202020;
+  }
+  .wish:hover .name {
+    height: 48%;
+    transition: height 0.5s;
+  }
+}
