@@ -21,8 +21,6 @@ const CONN_URL = "https://server-drab-six.vercel.app"
 //   return createAssistant({ getState });
 // };
 
-// test ci
-
 export default class WishList extends React.Component {
   constructor(props) {
     super(props);
