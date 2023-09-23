@@ -6,6 +6,8 @@ RUN npx create-react-app .
 
 RUN npm install @salutejs/client
 
-COPY ./src .
+COPY ./public ./public
+
+COPY ./src ./src
 
 CMD ["npm", "start"]
