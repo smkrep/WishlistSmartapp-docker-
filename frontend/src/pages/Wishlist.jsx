@@ -2,24 +2,9 @@ import React, {useState} from 'react'
 import Wish from '../components/Wish'
 import { AddWishButton } from '../components/AddWishButton'
 import { AddWishModal } from '../components/AddWishModal'
-// import {
-//   createSmartappDebugger,
-//   createAssistant,
-// } from "@salutejs/client";
 
 const CONN_URL = "https://server-drab-six.vercel.app"
 
-
-// const initializeAssistant = (getState/*: any*/) => {
-//   if (process.env.NODE_ENV === "development") {
-//     return createSmartappDebugger({
-//       token: process.env.REACT_APP_TOKEN ?? "",
-//       initPhrase: `Запусти ${process.env.REACT_APP_SMARTAPP}`,
-//       getState,
-//     });
-//   }
-//   return createAssistant({ getState });
-// };
 
 export default class WishList extends React.Component {
   constructor (props){
@@ -36,102 +21,6 @@ export default class WishList extends React.Component {
 
     this.getWishesFromDB(this.sberAssistantUserId)
 
-  //   this.assistant = initializeAssistant(() => this.getStateForAssistant() );
-  //   this.assistant.on("data", (event/*: any*/) => {
-  //     if(event.type=="smart_app_data"){
-  //       if (event.sub != undefined) {
-  //         // this.sberAssistantUserId = event.sub
-  //         // console.log("Sub", this.sberAssistantUserId)
-  //         // this.getWishesFromDB(this.sberAssistantUserId)
-  //       }else if (event.user_id != undefined) {
-  //         // this.sberAssistantUserId = event.user_id
-  //         // console.log("UserId", this.sberAssistantUserId)
-  //         // this.getWishesFromDB(this.sberAssistantUserId)
-  //       }
-  //     };
-  //     //console.log(`assistant.on(data)`, event);
-  //     const { action } = event
-  //     this.dispatchAssistantAction(action);
-  //   });
-  //   this.assistant.on("start", (event) => {
-  //     //console.log(`assistant.on(start)`, event);
-  //   });
-
-  // }
-
-  // getStateForAssistant () {
-  //   //console.log('getStateForAssistant: this.state:', this.state)
-  //   const state = {
-  //     item_selector: {
-  //       items: this.state.wishes.map(
-  //         ({ id, title }, index) => ({
-  //           number: index + 1,
-  //           id,
-  //           title,
-  //         })
-  //       ),
-  //     },
-  //   };
-  //   //console.log('getStateForAssistant: state:', state)
-  //   return state;
-  // }
-
-  // dispatchAssistantAction (action) {
-  //   //console.log('dispatchAssistantAction', action);
-  //   if (action) {
-  //     switch (action.type) {
-  //       case 'sberid':
-  //         this.sberAssistantUserId = action.note
-  //         this.sberAssistantUserId = this.sberAssistantUserId.replaceAll(' ', '')
-  //         this.sberAssistantUserId = this.sberAssistantUserId.replaceAll('+', '')
-  //         console.log(this.sberAssistantUserId)
-  //         this.getWishesFromDB(this.sberAssistantUserId)
-  //         break
-  //       case 'name':
-  //         this.wishobj.name = action.note
-  //         break
-  //       case 'importance':
-  //         //this.wishobj({priority: action.note})
-  //         switch(action.note.toLowerCase()){
-  //           case 'высокий':
-  //             this.wishobj.importance = 'important'
-  //             break
-  //           case 'средний':
-  //             this.wishobj.importance = 'medium'
-  //             break
-  //           case 'низкий':
-  //             this.wishobj.importance = 'not-important'
-  //             break
-  //         }
-  //         break
-  //       case 'price':
-  //         this.wishobj.price = action.note
-  //         break
-  //       case 'category':
-  //         this.wishobj.category = action.note
-  //         break
-  //       case 'delname':
-  //         this.updateWishesInDB(JSON.stringify({sberuserid: this.sberAssistantUserId, list_of_wishes: this.state.wishes.filter(elem => elem.name.toLowerCase() !== action.note.toLowerCase())}))
-  //         this.setState({
-  //           wishes: this.state.wishes.filter(elem => elem.name.toLowerCase() !== action.note.toLowerCase())
-  //         });
-  //         break
-  //       case 'additional':
-  //         switch(action.note.toLowerCase()){
-  //           case 'нет':
-  //             this.wishobj.additional_info = " "
-  //             break
-  //           default:
-  //             this.wishobj.additional_info = action.note
-  //             break
-  //         }
-  //         this.updateWishesInDB(JSON.stringify({sberuserid: this.sberAssistantUserId, list_of_wishes: [...this.state.wishes, {importance: this.wishobj.importance, name: this.wishobj.name, price: this.wishobj.price, category: this.wishobj.category, additional_info: this.wishobj.additional_info}]}))
-  //         this.setState({
-  //           wishes: [...this.state.wishes, {importance: this.wishobj.importance, name: this.wishobj.name, price: this.wishobj.price, category: this.wishobj.category, additional_info: this.wishobj.additional_info}]
-  //         });
-  //         break
-  //     }
-  //   }
   }
 
   getWishesFromDB(identificator){
