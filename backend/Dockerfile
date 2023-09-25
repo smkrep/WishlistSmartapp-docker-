@@ -8,5 +8,5 @@ RUN pip3 install flask_cors
 
 COPY ./api .
 
-CMD ["flask", "--app", "index", "run"]
+CMD ["flask", "--app", "index", "run", "--host", "0.0.0.0"]
 
