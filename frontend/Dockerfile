@@ -4,8 +4,6 @@ WORKDIR /frontend
 
 RUN npx create-react-app .
 
-RUN npm install @salutejs/client
-
 COPY ./public ./public
 
 COPY ./src ./src
